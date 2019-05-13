@@ -1,0 +1,31 @@
+\documentclass[uplatex,dvipdfmx]{jsarticle}
+\usepackage[utf8]{inputenc}
+
+\title{テンプレート（Overleafのデフォルトを少し改変）}
+\author{author name}
+\date{May 2019}
+
+\usepackage{natbib}%\citep{}，\citet{}命令を定義しているスタイルファイル
+\usepackage{graphicx}%画像を張り込むのに必要
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
+There is another theory which states that this has already happened.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.7]{universe}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
+
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
