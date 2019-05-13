@@ -14,7 +14,7 @@
 
 - Windowsの場合：[**あべのりインストーラ**](https://www.ms.u-tokyo.ac.jp/~abenori/soft/abtexinst.html)が便利。
 
-  ただこれでインストールされるのは TeX Live ではなく W32TeX なので TeX Live が必要なら TeX Live を```install-tl```しましょう
+  ただこれでインストールされるのは TeX Live ではなく W32TeX なので TeX Live が必要ならやっぱり TeX Live を```install-tl```しましょう
 
 - Linuxの場合：頑張って TeX Live を```install-tl``` してください
 - インストールが面倒な場合：**Overleaf**を使いましょう
@@ -82,9 +82,9 @@ Overleaf はよくできているが，Internet Connectivity が必要。オフ�
 
      　├  LaTeXtemplate.tex
 
-     　├  references.bib
+       　├  references.bib
 
-     　└  universe.jpg
+       　└  universe.jpg
 
 3. 最初のコンパイルを通してみましょう
 
@@ -241,7 +241,7 @@ texdoc natbib
 
   デフォルトのページサイズは `\documentclass` のオプションで指定します。
 
-  ```LaTeXtemplate.tex
+  ```LaTeXtemplate-detailed.tex
   \documentclass[a4paper,uplatex,dvipdfmx]{jsarticle}
   ```
 
@@ -270,7 +270,7 @@ texdoc natbib
 
   デフォルトの文字サイズは `\documentclass` のオプションで指定します。
 
-  ```LaTeXtemplate.tex
+  ```LaTeXtemplate-detailed.tex
   \documentclass[a4paper,10pt,uplatex,dvipdfmx]{jsarticle}
   ```
 
@@ -290,7 +290,7 @@ texdoc natbib
 
   プリアンブル部（`\documentclass` 〜 `\begin{document}` の間のこと）に次の書式で書いていきます。コピペして使ってください。
 
-  ```LaTeXtemplate.tex
+  ```LaTeXtemplate-detailed.tex
   %--余白の設定
   \setlength{\topmargin}{10mm}
   \addtolength{\topmargin}{-1in}
@@ -310,13 +310,13 @@ texdoc natbib
 
   例えば，四方の余白を全部10mmにしたければ↑のように書きます。なぜ `-1in` する必要があるのかは[このページ](http://hooktail.org/computer/index.php?%A5%DA%A1%BC%A5%B8%A5%EC%A5%A4%A5%A2%A5%A6%A5%C8)の画像を参照してください。TeX の参照点が 1inch ずれているんですね。**めっちゃこの画像わかりやすいので必ず見てみてください**。
 
-- ヘッダとフッタをつける
+- ヘッダとフッタをつける（基本）
 
   LaTeX デフォルトで弄るよりも，fancyhdr に頼った方が圧倒的に楽です。
 
   プリアンブル部（`\documentclass` 〜 `\begin{document}` の間のこと）に次の書式で書いていきます。コピペして使ってください。
 
-  ```LaTeXtemplate.tex
+  ```LaTeXtemplate-detailed.tex
   %ヘッダ・フッタの設定
   \usepackage{fancyhdr} 
   \pagestyle{fancy} 
@@ -332,7 +332,7 @@ texdoc natbib
 
   しかし，このままではうまく動きません。偶数ページのヘッダ・フッタが奇数ページと同じになってしまいます。偶数ページと奇数ページのヘッダ・フッタを別にするためには， `\documentclass` のオプションで twoside を指定します。
 
-  ```LaTeXtemplate.tex
+  ```LaTeXtemplate-detailed.tex
   \documentclass[a4paper,10pt,twoside,uplatex,dvipdfmx]{jsarticle}
   ```
 
@@ -352,7 +352,31 @@ texdoc natbib
 
   として fancyhdr マニュアルを表示しましょう。
 
-- ここまでの内容を反映した詳し目のテンプレートを LateXtemplate-detailed.tex として入れてあります。
+- **ここまでの内容を反映した詳し目のテンプレートを LateXtemplate-detailed.tex として入れてあります。**
+
+- ページ余白とページサイズを自在に弄る geometry パッケージ（発展）
+
+  余白の書き方はすでに示した通りですが，なかなか覚えられるものではありません（だからこそのコピペ推奨）。geometry パッケージを使えば，短いコードで余白・ページサイズを弄ることができます。**というかこっちの方が初心者向け説ある**。
+
+  例えば，四方の余白を全部10mmにしたければ次のようにプリアンブル部（`\documentclass` 〜 `\begin{document}` の間のこと）に書くだけ。
+
+  ```LaTeXtemplate-detailed.tex
+  \usepackage[margin=10mm]{geometry}
+  ```
+
+  これだけではなく，ページサイズの指定もできます。次のように。
+
+  ```LaTeXtemplate-detailed.tex
+  \usepackage[a4paper,margin=10mm]{geometry}
+  ```
+
+  他の機能もあります。詳しくは
+
+  ```ターミナル画面
+  texdoc geometry
+  ```
+
+  として geometry マニュアルを表示しましょう。
 
 ## あとは好きに作ってみましょう！（18:50〜19:00）
 
