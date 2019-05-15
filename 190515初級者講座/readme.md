@@ -242,7 +242,7 @@ texdoc natbib
   デフォルトのページサイズは `\documentclass` のオプションで指定します。
 
   ```LaTeXtemplate-detailed.tex
-  \documentclass[a4paper,uplatex,dvipdfmx]{jsarticle}
+  \documentclass[a4paper,papersize,uplatex,dvipdfmx]{jsarticle}
   ```
 
   ↑では a4paper を指定しましたが，*jsarticle において*一覧は次の通りです。
@@ -261,6 +261,8 @@ texdoc natbib
   - executivepaper = 10.5in, 7.25in
 
   さらに，
+
+  - **papersize オプション**は必ず入れておきましょう（pdfのサイズ変更にはこれが必要）
 
   - **landscape オプション**で縦横のサイズを入れ替えられます。
 
