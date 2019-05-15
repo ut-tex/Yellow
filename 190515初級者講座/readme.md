@@ -82,9 +82,9 @@ Overleaf はよくできているが，Internet Connectivity が必要。オフ�
 
      　├  LaTeXtemplate.tex
 
-       　├  references.bib
+       ├  references.bib
 
-       　└  universe.jpg
+      └  universe.jpg
 
 3. 最初のコンパイルを通してみましょう
 
