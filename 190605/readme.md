@@ -1,4 +1,4 @@
-# マクロを定義してみよう！ （\def,\newcommand,\NewDocumentCommand）
+# マクロを定義してみよう！（\def,\newcommand,\NewDocumentCommand）
 
 2019/6/5(Wed.) 18:00〜 初級者ゼミ 19:00〜 中上級者ゼミ ＠駒場キャンパス 東大TeX愛好会
 
