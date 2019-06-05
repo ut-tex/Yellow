@@ -1,0 +1,49 @@
+\documentclass[a4paper,uplatex]{jsarticle}
+\begin{document}
+\newcommand{\myouji}{川崎}%ここは\def\myouji{川崎} でもOK!
+\newcommand{\midashi}[1]{\vskip13pt\noindent{\Large\gtfamily #1}}%ここは\def\midashi#1{\vskip13pt\noindent{\Large\gtfamily #1}} でもOK!
+\newcommand{\noudo}[1]{\ifmmode
+\left[\mathrm{#1}\right]%数式モード中の時の処理
+\else
+$\left[\mathrm{#1}\right]$%数式モード外の時の処理
+\fi}%これまでと同じように\defで定義してもよい
+\newcommand{\heikou}[1]{\ifmmode
+K_{\mathrm{a(#1)}}%数式モード中の時の処理
+\else
+$K_{\mathrm{a(#1)}}$%数式モード外の時の処理
+\fi}%これまでと同じように\defで定義してもよい
+
+自己紹介をします。2015年東大入学なので，現在学部の5年生です。\myouji ほげお（仮名）といいます。
+
+\midashi{\myouji ほげおの趣味}
+\begin{itemize}
+\item 落語鑑賞
+\item カラオケ
+\item 水泳
+\item 生徒の質問に答えること
+\end{itemize}
+
+\midashi{\myouji ほげおのサークル}
+\begin{itemize}
+\item 東大\TeX 愛好会
+\item 東大SATySFi愛好会
+\end{itemize}
+
+\midashi{\myouji ほげおの生息場所}
+\begin{itemize}
+\item 代々木
+\item 本郷
+\item 駒場
+\item 川崎市
+\end{itemize}
+
+\midashi{授業内容}
+
+$\noudo{CH_3COOH}$，$\noudo{CH_3COO^-}$，$\noudo{H^+}$に対して$\heikou{CH_3COOH}$は
+\[
+\heikou{CH_3COOH}=\frac{\noudo{CH_3COO^-}\noudo{H^+}}{\noudo{CH_3COOH}}
+\]
+と定義される。
+
+
+\end{document}
