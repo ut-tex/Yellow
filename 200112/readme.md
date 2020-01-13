@@ -67,7 +67,7 @@ ascolorboxのあざらしさんが30回読んだあれです。現在tcolorbox�
 
 鉄緑の`⧵余白設定`が使えればストレスフリーで余白設定できるけれど，通常のLaTeX式でやろうとするとgeometry.styを使わなければ結構なバッドノウハウ。
 
-
+**メモ：rasterは`⧵end{tcolorbox}`の後ろにスペーストークンが入っても意図的に食われる仕様になっている。機序を調べたい。**
 
 ## 次はlistingsを理解しよう
 
@@ -115,7 +115,11 @@ mintedほどシンタックスハイライトは豪華にならないが，そ�
 
 listing, listingutf8の書式はtcolorboxmanualを見る。mintedの書式はmintedの説明書を見る。という違いもあるので注意！
 
+**メモ：日本語が登場する場合，listingsutf8よりはlistings + plistings.styの方がいいよう。**
 
+https://github.com/h-kitagawa/plistings
+
+https://chiyosuke.blogspot.com/2019/05/listingsfancyvrb.html
 
 ## magazine はTeX愛好会ゴコロをくすぐるライブラリ！
 
@@ -192,6 +196,8 @@ HOGEHOGE, fugafuga, piyopiyo
 ```
 
 相対的位置で決めていきます。topとbottomは最初から定義されている。
+
+**Common Pitfall!** betweenは上 and 下の順番で書くこと！下 and 上の順番だと変なことになる。
 
 3. 箱の装飾を行います。枠線はもういらないので除去（showframe=false）
 
