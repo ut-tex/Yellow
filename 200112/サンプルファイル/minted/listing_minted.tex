@@ -1,0 +1,54 @@
+\documentclass[a4paper,10pt,uplatex,landscape,papersize]{jsarticle}
+\usepackage[dvipdfmx]{graphicx,xcolor}
+\usepackage[cache=false]{minted}
+\usepackage{tcolorbox}
+\tcbuselibrary{minted}
+\tcbset{listing engine=minted}
+\pagestyle{empty}
+
+%--余白の設定
+\setlength{\topmargin}{18mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{14mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{14mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-28mm}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-36mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{0mm}
+\setlength{\topskip}{0mm}
+
+\begin{document}
+\begin{minted}{c}
+#include <stdio.h>
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}
+\end{minted}
+
+\begin{tcblisting}{colback=red!5!white,colframe=red!75!black,left=1cm,minted options={fontsize=\small,linenos,firstnumber=1100,numbersep=3mm}}
+This is a \LaTeX\ example which displays the text as source code
+and in compiled form.
+\end{tcblisting}
+
+\begin{tcblisting}{listing only,title=another language listing only example,fonttitle=\bfseries,colback=red!5!white,colframe=red!75!black,minted language=xml}
+<?xml version="1.0"?>
+<project name="Package tcolorbox" default="documentation" basedir="."> <description>
+       Apache Ant build file (http://ant.apache.org/)
+     </description>
+   </project>
+\end{tcblisting}
+
+\begin{tcblisting}{text only,title=text only example,fonttitle=\bfseries,colback=red!5!white,colframe=red!75!black,minted language=xml}
+\LaTeX
+
+text onlyモードって普通にやるのと一緒でなんで使うんだろうみたいなところある
+\end{tcblisting}
+
+\end{document}

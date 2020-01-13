@@ -1,0 +1,65 @@
+\documentclass[dvipdfmx,12pt]{article}\usepackage[a3paper,landscape]{geometry}\usepackage[poster]{tcolorbox}
+\usepackage{scsnowman}
+\usepackage{lipsum}
+\pagestyle{empty}
+\begin{document}
+\begin{tcbposter}[%
+coverage = {spread},
+poster = {showframe=true,columns=5,rows=4},
+boxes={opacityfill=0.5,
+sharp corners,
+colframe=white,
+colbacktitle=red!40!black,
+coltitle=white,
+fonttitle=\sffamily\bfseries,
+boxrule=0pt,
+colback=white,
+}
+]
+\posterbox{name=logo,column=1,span=1,below=top}{%
+\includegraphics[width=\linewidth]{ロゴ.jpg}
+}
+\posterbox[colback=red!40!black]{name=title,column=2,span=4,below=top}{%
+\color{white}
+\centering\sffamily\bfseries\Huge RESEARCH TITLE\\[3mm]\normalsize
+\underline{HOGE HOGE}, fuga fuga, piyo piyo, hoge fuga, piyo fuga, hoge piyo, piyo fuge
+}
+\posterbox[adjusted title=Background]
+{name=background,column=1,span=1,below=logo}{\lipsum[1]}
+\posterbox[adjusted title=Hypothesis and Protocol]
+{name=hypothesis,column=1,span=1,between=background and bottom}{\lipsum[2]}
+\posterbox[adjusted title=Result6]
+{name=result6,column=2,span=1.5,above=bottom}{\scsnowman[scale=16,muffler=red]\scsnowman[scale=16,muffler=red]
+
+A snowman with a red muffler were appeared in the certain setting.}
+\posterbox[adjusted title=COI]
+{name=coi,column*=5,span=2.5,above=bottom}{This research was funded by ABCDE Co. Ltd.}
+\posterbox[rounded corners,colback=green!20!white]
+{name=takehome,column*=5,span=2.5,above=coi}{{\centering\sffamily\bfseries TAKE HOME MESSAGES}
+
+\lipsum[3]}
+\posterbox[adjusted title=Result3]
+{name=result3,column=2,span=1.5,above=result6}{\scsnowman[scale=16,hat=blue]\scsnowman[scale=16,hat=blue]\\
+
+Snowmans with a blue hat are shown above.}
+\posterbox[adjusted title=Result4]
+{name=result4,column*=4,span=1.5,above=takehome}{\scsnowman[scale=16,hat=red]\scsnowman[scale=16,hat=red]
+
+Snowmans with a red hat were appeared in the certain setting.
+
+\centering
+Hurray!!
+
+Hurray!!
+
+Hurray!!}
+\posterbox[adjusted title=Result5]
+{name=result5,column=5,span=1,above=takehome}{\scsnowman[scale=16,hat=green]
+
+A snowman with a green hat were appeared in the certain setting. I am not sure why.}
+\posterbox[adjusted title=Result1]
+{name=result1,column=2,span=2,between=title and result4}{\centering\scsnowman[scale=25,hat=black,muffler=green]}
+\posterbox[adjusted title=Result2]
+{name=result2,column=4,span=2,between=title and result4}{\centering\scsnowman[scale=25,hat=red,muffler=blue]}
+\end{tcbposter}
+\end{document}

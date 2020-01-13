@@ -1,0 +1,111 @@
+\documentclass[b5j,10pt,twoside,uplatex,papersize,landscape]{jsarticle}
+\usepackage{fancyhdr}
+\usepackage[dvipdfmx]{graphicx,xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{raster}
+\tcbuselibrary{skins}
+\tcbuselibrary{magazine}
+
+\pagestyle{empty}
+
+%--余白の設定
+\setlength{\topmargin}{0mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{0mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{0mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{0mm}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{0mm}
+\setlength{\topskip}{0mm}
+
+\begin{document}
+
+%紙の1/2の高さ，1/4の高さを定義しておく
+\newdimen\halfpaperheight
+\newdimen\quarterpaperheight
+\halfpaperheight=\paperheight
+\divide\halfpaperheight by2
+\quarterpaperheight=\halfpaperheight
+\divide\quarterpaperheight by2
+
+%arrayに中身を貯めてゆく。完成形のboxの装飾を意識しながらオプションを書く。
+\newboxarray{formentsuke}
+\begin{tcolorbox}[%
+nobeforeafter,
+width=\paperwidth/4,
+break at=\halfpaperheight,
+height fixed for=all,
+enforce breakable,
+colframe=white,
+colback=white,
+sharp corners,
+halign=center,
+valign=center,
+boxrule=0pt,
+reset box array=formentsuke,
+store to box array=formentsuke,
+bottom=10mm,
+underlay={\node[above=5mm,font=\footnotesize]
+at (frame.south) {- \arabic{tcbbreakpart} -};},
+]
+\hfil {\Large ここからスタート！}
+
+\newcount\loopcount
+\loop あ\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop い\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop う\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop え\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop お\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop か\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+\loop き\advance\loopcount1\ifnum\loopcount<240\repeat\loopcount=0
+
+\hfil {\Large ここまで！}
+\end{tcolorbox}
+
+%180度rotate後の1/4高さずれの調整
+\mbox{}
+\vskip-\quarterpaperheight
+\vskip-\baselineskip
+\mbox{}
+%tcboxedrasterの要領で，外boxの装飾を設定するつもりで書く
+\begin{tcbraster}[%
+nobeforeafter,
+raster columns=4,
+raster width=\paperwidth,
+raster height=\paperheight,
+raster rows=2,
+colframe=white,
+colback=white,
+sharp corners,
+halign=center,
+valign=center,
+boxrule=0pt,
+raster before skip=0pt,
+raster left skip=0pt,
+raster row skip=0pt,
+raster right skip=0pt,
+raster after skip=0pt,
+raster column skip=0pt,
+raster equal skip=0pt,
+blankest,
+]
+\begin{tcolorbox}[enhanced,rotate=180]\useboxarray[formentsuke]{1}\end{tcolorbox}
+\begin{tcolorbox}[enhanced,rotate=180]\useboxarray[formentsuke]{8}\end{tcolorbox}
+\begin{tcolorbox}[enhanced,rotate=180]\useboxarray[formentsuke]{7}\end{tcolorbox}
+\begin{tcolorbox}[enhanced,rotate=180]\useboxarray[formentsuke]{6}\end{tcolorbox}
+\begin{tcolorbox}\useboxarray[formentsuke]{2}\end{tcolorbox}
+\begin{tcolorbox}[enhanced, borderline north={1pt}{-0.5pt}{gray}]\useboxarray[formentsuke]{3}\end{tcolorbox}
+\begin{tcolorbox}[enhanced, borderline north={1pt}{-0.5pt}{gray}]\useboxarray[formentsuke]{4}\end{tcolorbox}
+\begin{tcolorbox}\useboxarray[formentsuke]{5}\end{tcolorbox}
+\end{tcbraster}
+
+
+
+
+\end{document}

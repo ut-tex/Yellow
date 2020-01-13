@@ -1,0 +1,86 @@
+\documentclass[a4paper,10pt,uplatex,landscape,papersize]{jsarticle}
+\usepackage[dvipdfmx]{graphicx,xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{raster}
+\pagestyle{empty}
+
+%--余白の設定
+\setlength{\topmargin}{18mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{14mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{14mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-28mm}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-36mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{0mm}
+\setlength{\topskip}{0mm}
+\def\名札#1#2{%
+\begin{tcolorbox}\gtfamily\ttfamily
+{\LARGE #1}
+
+\vskip1.2\baselineskip
+
+\Huge\hfil #2
+\end{tcolorbox}
+}
+
+\begin{document}
+\begin{tcbraster}[%
+raster width=\linewidth,
+raster height=\textheight,
+raster left skip=0pt,
+raster column skip=-0.5mm,
+raster right skip=0pt,
+raster before skip=0pt,
+raster row skip=-0.5mm,
+raster after skip=0pt,
+standard,
+raster equal height,
+raster columns=3,
+raster rows=3,
+colback=white,
+colframe=black,
+colbacktitle=white,
+sharp corners,
+left=10mm,
+right=10mm,
+top=10mm,
+bottom=10mm,
+middle=0mm]
+\名札{昭39卒}{ほげ　ほげ　先生}
+\名札{昭46卒}{ふが　ほげ　先生}
+\名札{昭53卒}{ほげ　ふが　先生}
+\名札{昭59卒}{ふが　ふが　先生}
+\名札{昭61卒}{ほげ　ぴよ　先生}
+\名札{現編集部}{保毛　風雅}
+\名札{現編集部}{保毛　保毛}
+\名札{現編集部}{風雅　保毛}
+\名札{現編集部}{風雅　風雅}
+\名札{現編集部}{保毛　日世}
+\名札{現編集部}{日世　保毛}
+\名札{現編集部}{日世　日世}
+\名札{現編集部}{風雅　日世}
+\名札{現編集部}{日世　風雅}
+\名札{現編集部}{ああ　いい}
+\名札{現編集部}{うう　ええ}
+\名札{現編集部}{おお　かか}
+\名札{現編集部}{きき　くく}
+\名札{現編集部}{けけ　ここ}
+\名札{現編集部}{ささ　しし}
+\名札{次期編集部}{すす　にに}
+\名札{次期編集部}{せせ　ねね}
+\名札{次期編集部}{そそ　んう}
+\名札{次期編集部}{たた　のの}
+\名札{次期編集部}{ちち　そじ}
+\名札{次期編集部}{っっ　がが}
+\名札{次期編集部}{てて　ぎぎ}
+\名札{次期編集部}{とと　ぐぐ}
+\名札{次期編集部}{なな　げげ}
+\end{tcbraster}
+
+\end{document}

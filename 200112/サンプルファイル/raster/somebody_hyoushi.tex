@@ -1,0 +1,111 @@
+\documentclass[b5j,10pt,twoside,uplatex,papersize]{jsarticle}
+\usepackage{fancyhdr}
+\usepackage[dvipdfmx]{graphicx,xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{raster}
+\usepackage{lipsum}
+
+%２ページ以降の段落幅に合わせてヘッダ・フッタを設定
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-28mm}
+\pagestyle{fancy}
+\fancyhead[OR]{\footnotesize\gtfamily 奇数ページヘッダ右上}
+\fancyhead[EL]{\footnotesize\gtfamily 偶数ページヘッダ左上}
+\fancyfoot[C]{−\arabic{page}−}
+
+%--表紙の余白の設定
+\setlength{\topmargin}{0mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{0mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{0mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{0mm}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{0mm}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\setlength{\footskip}{0mm}
+\setlength{\topskip}{0mm}
+
+\begin{document}\thispagestyle{empty}
+%\noindent\begin{minipage}{\paperwidth}%デザイン中はあったほうが楽
+\begin{tcbraster}[%
+nobeforeafter,
+raster columns=100,
+raster width=\paperwidth,
+raster rows=2,
+colframe=black,
+colback=white,
+sharp corners,
+halign=center,
+valign=center,
+height=6cm,
+width=10zw,
+boxrule=2pt,
+raster before skip=-2pt,
+raster left skip=-2pt,
+raster row skip=-2pt,
+raster right skip=-2pt,
+raster after skip=-2pt,
+raster column skip=-2pt,
+]
+\begin{tcolorbox}[raster multicolumn=40]
+\Large\gt{化学基礎講座}
+\end{tcolorbox}
+\begin{tcolorbox}[raster multicolumn=60,
+colframe=black,
+colback=white!80!black]
+\LARGE\textcolor{white}{\texttt{CHEMISTRY}}
+\end{tcolorbox}
+\begin{tcolorbox}[height=\textheight-6cm+6pt,
+raster multicolumn=40,
+colframe=black,
+colback=white!80!black]
+\LARGE\rotatebox[origin=c]{90}{\textcolor{white}{\texttt{BASIC COURSE}}}
+\end{tcolorbox}
+\begin{tcolorbox}[height=\textheight-6cm+6pt,raster multicolumn=60]
+\Large\gtfamily
+高１化学\quad Ｔ９
+
+第１回\quad 原子とイオン
+
+\vskip\baselineskip
+
+\normalsize 担当：保毛\quad 保毛
+
+\vskip3\baselineskip
+
+\underline{氏名：\hskip10zw}
+\end{tcolorbox}
+\end{tcbraster}
+%\end{minipage}
+
+%--余白の設定-1
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-28mm}
+\setlength{\hsize}{\textwidth}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-36mm}
+\addtolength{\textheight}{-18pt}
+\addtolength{\textheight}{-10pt}
+\addtolength{\textheight}{-18pt}
+%ここに\newpageを挟む！
+\newpage
+%--余白の設定-2
+\setlength{\topmargin}{18mm}
+\addtolength{\topmargin}{-1in}
+\setlength{\oddsidemargin}{14mm}
+\addtolength{\oddsidemargin}{-1in}
+\setlength{\evensidemargin}{14mm}
+\addtolength{\evensidemargin}{-1in}
+\setlength{\headheight}{18pt}
+\setlength{\headsep}{10pt}
+\setlength{\footskip}{18pt}
+\setlength{\topskip}{0mm}
+
+
+有名なろーれむイプサムが続きます\lipsum[1-10]
+
+\end{document}
