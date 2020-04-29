@@ -1,0 +1,31 @@
+%パターンマッチ用に書式変更
+\def\HyphList#1{\@HyphList#1,:}
+
+%パターンマッチでカンマ区切りリストの終末を捉える。カンマ区切りリストの各要素に対して\HyphList@Degrade する
+\def\@HyphList#1,#2:{\HyphList@Degrade#1--,%
+\def\@HyphList@second{#2}%
+\ifx\@HyphList@second\@empty
+\relax
+\else
+\@HyphList#2:%
+\fi}%
+
+%\HyphList@Degrade
+%パターンマッチでハイフンを含むかどうかを場合分けし，含む場合はDegradeする
+%Degrade済みの要素１つ１つに対して\HyphListに行う処理 を適用してゆく
+\newcount\HyphList@Degrade@count
+\def\HyphList@Degrade#1-#2-#3,{%
+\def\HyphList@Degrade@second{#2}%
+\ifx\HyphList@Degrade@second\@empty
+\HyphListに行う処理{#1}%
+\else
+\HyphList@Degrade@count=#1
+\loop
+\expandafter\HyphListに行う処理\expandafter{\the\HyphList@Degrade@count}%
+\ifnum\HyphList@Degrade@count<#2
+\advance\HyphList@Degrade@count1%
+\repeat
+\fi}
+
+%デフォルトで\HyphListに行う処理 を「空白をあけて出力」にしておく
+\def\HyphListに行う処理#1{#1\ }

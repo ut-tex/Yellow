@@ -18,7 +18,7 @@ LaTeXエンドユーザとして普通の¶文書作成する際にも遭遇し�
 
 ### 講義：プリミティブとマクロの違い
 
-そもそも，コントロール・シークエンスとは何か。これは以前のゼミ（190605）を参照してください。ここにもコピペしておきます。
+そもそも，コントロール・シークエンス（制御綴）とは何か。これは以前のゼミ（190605）を参照してください。ここにもコピペしておきます。
 
 （コピペ開始）
 
@@ -52,7 +52,7 @@ LaTeXエンドユーザとして普通の¶文書作成する際にも遭遇し�
 
 プリミティブの挙動についてはプリミティブの一覧表 https://www.tug.org/utilities/plain/cseq.html を確かめましょう。なお，pTeXになると，プリミティブが少し増えています：増えているものの一覧はこちらhttps://zrbabbler.hatenablog.com/entry/20160612/1465700860 。
 
-#### hrulefillの展開を追ってみよう
+#### \hrulefillの展開を追ってみよう
 
 latex.ltxに次のような定義がありますから，
 
@@ -188,8 +188,9 @@ That's true.
 ```tex
 \newcount\hoge
 \hoge=1
-\loop\ifnum\hoge<10
+\loop
 \the\hoge 回目
+\ifnum\hoge<10
 \advance\hoge1
 \repeat
 ```
@@ -206,6 +207,8 @@ That's true.
 
 次のコードはなぜうまくいかないのか説明せよ。not sameになってしまう。
 
+the same *top-level* expansionではないから
+
 ```tex
 \def\A{\B}
 \def\B{\kern}
@@ -218,6 +221,15 @@ not same
 \fi
 ```
 
+`\ifthenelse`はこれをあまり気にしなくてもよいので楽！sameがでる。
 
+```tex
+\def\A{\B}
+\def\B{\kern}
+\def\a{\b}
+\def\b{\kern}
+\ifthenelse{\equal{\A}{\a}}{same}{not same}
+```
 
-`\ifthenelse`はこれをあまり気にしなくてもよいので楽！
+### \def によるパターンマッチ
+
