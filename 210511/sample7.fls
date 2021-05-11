@@ -1,0 +1,8 @@
+PWD /Users/yuta/Documents/GitHub/Yellow/210511
+INPUT /usr/local/teTeX/share/texmf/web2c/texmf.cnf
+INPUT /usr/local/teTeX/share/texmf/web2c/texmf.cnf
+INPUT /usr/local/teTeX/share/texmf-var/web2c/uplatex.fmt
+INPUT sample7.tex
+OUTPUT sample7.log
+INPUT /usr/local/teTeX/share/texmf/ptex/platex/jsclasses/jsarticle.cls
+INPUT /usr/local/teTeX/share/texmf/ptex/platex/jsclasses/jsarticle.cls
