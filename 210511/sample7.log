@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  11 MAY 2021 20:53
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  11 MAY 2021 21:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -60,8 +60,7 @@ File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count188
 \g__pdf_backend_link_int=\count189
 \g__pdf_backend_link_sf_int=\count190
-)
-No file sample7.aux.
+) (./sample7.aux)
 \openout1 = `sample7.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -82,12 +81,12 @@ LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
-[1
+ [1
 
 ] (./sample7.aux) ) 
 Here is how much of TeX's memory you used:
- 604 strings out of 479460
- 9630 string characters out of 5865976
+ 606 strings out of 479460
+ 9654 string characters out of 5865976
  301757 words of memory out of 5000000
  18379 multiletter control sequences out of 15000+600000
  406944 words of font info for 50 fonts, out of 8000000 for 9000

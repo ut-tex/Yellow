@@ -1,10 +1,10 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  11 MAY 2021 20:52
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  11 MAY 2021 21:55
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**sample4.tex
-(./sample4.tex
+**sample6.tex
+(./sample6.tex
 pLaTeX2e <2020-10-01u04>+2 (based on LaTeX2e <2020-10-01> patch level 4)
 L3 programming layer <2021-02-18>
 (/Applications/TeXLive/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -39,12 +39,8 @@ File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
 \g__pdf_backend_link_int=\count188
 \g__pdf_backend_link_sf_int=\count189
 )
-
-LaTeX Warning: Unused global option(s):
-    [9pt].
-
-(./sample4.aux)
-\openout1 = `sample4.aux'.
+No file sample6.aux.
+\openout1 = `sample6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -64,16 +60,22 @@ LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
 LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
- [1
+)
+*
+(Please type a command or say `\end')
+*
+(Please type a command or say `\end')
+*\stop
+[1
 
-] (./sample4.aux) ) 
+] 
 Here is how much of TeX's memory you used:
- 386 strings out of 479460
- 7151 string characters out of 5865976
- 298890 words of memory out of 5000000
- 18166 multiletter control sequences out of 15000+600000
+ 381 strings out of 479460
+ 7097 string characters out of 5865976
+ 298789 words of memory out of 5000000
+ 18165 multiletter control sequences out of 15000+600000
  406071 words of font info for 45 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  44i,4n,50p,151b,163s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sample4.dvi (1 page, 268 bytes).
+Output written on sample6.dvi (1 page, 248 bytes).

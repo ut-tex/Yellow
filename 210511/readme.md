@@ -58,6 +58,7 @@ dviwareについても紹介。
 
 - xdvi……dviを読む
 - dvipdfmx……dviをpdfに変換
+- dviout(Windows用ソフト)……dviを読む
 
 早速dviを用意したのですが，xdviが動かなかったです。皆さんの環境では動きますか？
 

@@ -1,9 +1,10 @@
-This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  2 MAY 2021 22:53
+This is e-upTeX, Version 3.141592653-p3.9.0-u1.27-210218-2.6 (utf8.uptex) (TeX Live 2021) (preloaded format=uplatex 2021.4.20)  11 MAY 2021 21:49
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/yuta/Documents/GitHub/Yellow/210511/sample2.tex
-(/Users/yuta/Documents/GitHub/Yellow/210511/sample2.tex
+**sample2.tex
+(./sample2.tex
 pLaTeX2e <2020-10-01u04>+2 (based on LaTeX2e <2020-10-01> patch level 4)
 L3 programming layer <2021-02-18>
 (/Applications/TeXLive/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.c
@@ -59,8 +60,7 @@ File: l3backend-dvips.def 2021-03-18 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count188
 \g__pdf_backend_link_int=\count189
 \g__pdf_backend_link_sf_int=\count190
-)
-No file sample2.aux.
+) (./sample2.aux)
 \openout1 = `sample2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -91,16 +91,16 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 4.62341pt on input line 3.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 3.
-[1
+ [1
 
 ] (./sample2.aux) ) 
 Here is how much of TeX's memory you used:
- 607 strings out of 479460
- 9785 string characters out of 5865976
+ 608 strings out of 479460
+ 9682 string characters out of 5865976
  301757 words of memory out of 5000000
  18381 multiletter control sequences out of 15000+600000
  407409 words of font info for 53 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 54i,4n,60p,202b,169s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 54i,4n,60p,159b,169s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on sample2.dvi (1 page, 424 bytes).
