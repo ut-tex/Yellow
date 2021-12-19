@@ -1,0 +1,28 @@
+\documentclass[b5j,10pt,twoside,autodetect-engine,dvipdfmx,fleqn]{jsarticle}
+\usepackage{amsmath,amssymb,array,graphicx,xcolor,tikz}
+\usepackage[top=2.0truecm,bottom=1.4truecm,left=1.4truecm,right=1.0truecm]{geometry}
+\usepackage[deluxe,multi,uplatex]{otf}
+
+
+
+\begin{document}
+
+ほげほげ，ここがインライン数式$x+y=2$，\(p+q=3\)，\begin{math}n+m=4\end{math}
+
+ディスプレイ数式は下にある。
+
+\TeX が用意する環境。fleqnを入れているのに，効いてないので，使うべきではない。
+
+$$
+x+y=2
+$$
+
+\LaTeX が用意する環境。fleqnを入れているのが効いている
+
+\[ 
+x+y=2
+\]
+
+
+
+\end{document}
